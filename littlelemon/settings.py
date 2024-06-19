@@ -91,6 +91,19 @@ DATABASES = {
         }
 }
 
+DJOSER = {
+    'USER_ID_FIELD': 'username',  # Set the identifier field for the user
+    # Other Djoser settings as needed
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        # Add any other authentication classes as needed
+    ],
+}
+
 
 # The settings for media files have been updated for the Graded assessment
 MEDIA_URL = '/media/'
